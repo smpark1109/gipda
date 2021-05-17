@@ -1,0 +1,79 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Gipda</title>
+        <style>
+            body{
+                background-image: url('https://user-images.githubusercontent.com/81151065/116236413-0247e380-a79a-11eb-949f-24467239cf08.png');
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-size: 100% 100%;
+            }
+        </style>
+    </head>    
+    <body>
+        <div class="page-header">
+            <h1>인공지능 글쓰기 프로그램</h1>
+            <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+            <style>
+                div {
+                    margin: 100px;
+                    width: 500px;
+                    line-height:500%;
+                }
+                #left {
+                    text-align: left;
+                }
+                #right {
+                    text-align: right;
+                }
+                #justify {
+                    text-align: justify;
+                }
+                #center {
+                    text-align: center;
+                }
+            </style>
+        </head>
+        <body>
+            <div id="left">
+                <span style="color:blue"> 관련 문단 제시 (소재 추천) </span>
+               <textarea name="subject" rows="10" cols="60"
+               wrap="virtual"></textarea>
+               <input type="submit" value='제출하기'>
+            </form>
+                <br />
+                <span style="color:blue">인공지능이 써주는 뒷내용 </span>  
+                <textarea name="writer" rows="10" cols="60"
+               wrap="virtual"></textarea>
+               <input type="submit" value='제출하기'>
+               <p>
+                   장르 : &nbsp;&nbsp;
+                   <input type = "radio" name="genre" value = "소설">
+                   소설
+                   <input type = "radio" name="genre" value = "시">
+                   시
+                   <input type = "radio" name="genre" value = "기사">
+                   기사
+               </p>
+            </form>
+
+            <br />
+            <span style="color:blue">맞춤법 검사</span>
+        <form action="{% url 'grammar' %}">
+        <textarea cols="60" rows="30" name='spelltext'></textarea>
+        <input type="submit" value="제출하기" />
+        </form>
+
+                <br />
+                <span style="color:blue">단어 수 세기</span>
+            <form action="{% url 'new' %}">
+            <textarea cols="60" rows="30" name='fulltext'></textarea>
+            <input type="submit" value="제출하기" />
+            </form>
+
+            </ul>
+        </div>
+
+    </body>
+</html>
