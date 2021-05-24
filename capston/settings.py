@@ -26,7 +26,7 @@ SECRET_KEY = 'DJANGO_SECRET_KEY', 'django-insecure-l*a-t$vf69^t9%j_3j58%h=c7+zb_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','gipda.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1','geulgipda.herokuapp.com/']
 
 
 # Application definition
