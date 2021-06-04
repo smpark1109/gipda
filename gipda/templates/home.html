@@ -4,75 +4,67 @@
         <title>Gipda</title>
         <style>
             body{
-                background-image: url('https://user-images.githubusercontent.com/81151065/116236413-0247e380-a79a-11eb-949f-24467239cf08.png');
+                background-image: url('https://user-images.githubusercontent.com/81151065/120625439-a9582300-c49c-11eb-93fc-646eeb1fe3fa.jpg');
                 background-repeat: no-repeat;
                 background-attachment: scroll;
                 background-size: 100% 100%;
             }
+            .nav {
+                height:70px;
+                border-bottom:1px solid black;
+                display:flex;
+                align-items: center;
+                background: black;
+            }
+
+            .nav-item {
+                margin-left:400px
+            }
+
+
+            .company-name {
+                font-size: 30px;
+                font-weight: bold;
+                margin-left: 20px;
+            }
+
+            .title {
+                text-align: center;
+                font-size:3.5rem;
+                font-weight:bold;
+            }
+
+            .subtitle {
+                text-align: center;
+                font-size: 1.25rem;
+                font-weight: 300;
+                margin-top: 50px;
+            }
+
+            .main {
+                width:800px;
+                margin: 0 auto;
+                margin-top: 100px;
+            }
         </style>
     </head>    
     <body>
-        <div class="page-header">
-            <h1>인공지능 글쓰기 프로그램</h1>
-            <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-            <style>
-                div {
-                    margin: 100px;
-                    width: 500px;
-                    line-height:500%;
-                }
-                #left {
-                    text-align: left;
-                }
-                #right {
-                    text-align: right;
-                }
-                #justify {
-                    text-align: justify;
-                }
-                #center {
-                    text-align: center;
-                }
-            </style>
-        </head>
-        <body>
-            <div id="left">
-                <span style="color:blue"> 관련 문단 제시 (소재 추천) </span>
-               <textarea name="subject" rows="10" cols="60"
-               wrap="virtual"></textarea>
-               <input type="submit" value='제출하기'>
-            </form>
-                <br />
-                <span style="color:blue">인공지능이 써주는 뒷내용 </span>  
-                <textarea name="writer" rows="10" cols="60"
-               wrap="virtual"></textarea>
-               <input type="submit" value='제출하기'>
-               <p>
-                   장르 : &nbsp;&nbsp;
-                   <input type = "radio" name="genre" value = "소설">
-                   소설
-                   <input type = "radio" name="genre" value = "시">
-                   시
-                   <input type = "radio" name="genre" value = "기사">
-                   기사
-               </p>
-            </form>
-
-            <br />
-            <span style="color:blue">맞춤법 검사</span>
-        <form action="{% url 'grammar' %}">
-        <textarea cols="60" rows="30" name='spelltext'></textarea>
-        <input type="submit" value="제출하기" />
-        </form>
-
-                <br />
-                <span style="color:blue">단어 수 세기</span>
-            <form action="{% url 'new' %}">
-            <textarea cols="60" rows="30" name='fulltext'></textarea>
-            <input type="submit" value="제출하기" />
-            </form>
-
-            </ul>
+        <div class="nav">
+            <a class="nav-item" href="{% url 'subject' %}"><span style="color:white">소재 추천</span></a>
+            <a class="nav-item" href="{% url 'contents' %}"><span style="color:white">AI 뒷내용</span></a>
+            <a class="nav-item" href="{% url 'grammar' %}"><span style="color:white">맞춤법 검사</span></a>
+        </div>
+        <div class="company-name">
+            글 깁:다
+        </div>
+        <div class="main">
+            <div class="title">
+                AI와 함께하는 글쓰기!
+            </div>
+            <div class="subtitle">
+            글을 쓰는 것에 취미가 있으신 분들,
+            또는 글을 쓰는 것을 좋아하지만 초보자 이시거나 아직 갈피를 잡기 힘드시다면
+            저희 인공지능 AI가 도움을 드릴 수 있습니다!
         </div>
 
     </body>

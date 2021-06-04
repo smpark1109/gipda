@@ -11,7 +11,8 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',gipda.views.home,name="home"),
-    path('new',gipda.views.new,name="new"),
+    path('subject',gipda.views.subject,name="subject"),
+    path('contents',gipda.views.contents,name="contents"),
     path('grammar',gipda.views.grammar,name="grammar"),
     url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
     url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
